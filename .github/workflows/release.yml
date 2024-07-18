@@ -76,6 +76,8 @@ jobs:
         id: tag
         run: |
          # See https://docs.github.com/en/get-started/using-git/dealing-with-special-characters-in-branch-and-tag-names
+         git config --global user.email "hmd818121@gmail.com"
+         git config --global user.name "x7md"
          TAG=v$(date -Iseconds | sed 's/[T:\+]/-/g')
          echo "$TAG"
          echo "tag=$TAG" >> $GITHUB_OUTPUT
